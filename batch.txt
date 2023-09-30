@@ -1,0 +1,15 @@
+style parallel
+echo "START"
+echo "--------------------------------------------"
+echo "Background..."
+./loop_test.sh &
+sleep 5
+ps
+ls ; pwd
+sleep 5
+echo "Pushing to Foreground!"
+fg 1
+ps
+exit
+echo "--------------------------------------------"
+echo "END"
